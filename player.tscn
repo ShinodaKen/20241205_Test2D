@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://blo7iqvsaj8p2"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_bx0xf"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_gfhbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_argf3"]
+size = Vector2(60, 100)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_bx0xf")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+position = Vector2(0, -50)
+scale = Vector2(100, 100)
+mesh = SubResource("QuadMesh_gfhbl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -50)
+shape = SubResource("RectangleShape2D_argf3")
